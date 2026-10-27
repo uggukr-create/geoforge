@@ -1,0 +1,66 @@
+{
+  "name": "geoforge",
+  "version": "0.1.0",
+  "description": "Open-source GEO/AEO auditor, llms.txt compiler and MCP server. Optimize websites and e-commerce stores for ChatGPT Search, Google AI Overviews, Claude and Perplexity.",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "geoforge": "dist/cli.js"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "geo",
+    "aeo",
+    "llms.txt",
+    "mcp",
+    "seo",
+    "ai-search",
+    "json-ld",
+    "robots.txt"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run",
+    "dev": "tsx src/cli.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "cheerio": "^1.2.0",
+    "commander": "^15.0.0",
+    "turndown": "^7.2.4",
+    "turndown-plugin-gfm": "^1.0.2",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "@types/turndown": "^5.0.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.5"
+  },
+  "author": "uggukr-create",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uggukr-create/geoforge.git"
+  },
+  "bugs": {
+    "url": "https://github.com/uggukr-create/geoforge/issues"
+  },
+  "homepage": "https://github.com/uggukr-create/geoforge#readme"
+}
